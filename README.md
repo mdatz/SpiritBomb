@@ -1,4 +1,8 @@
-# Qwik Library ⚡️
+# SpiritBomb - A Qwik Component Library ⚡️
+
+Using the power of open source, let's pool our energy and create an amazing component library for this game changing framework knwon as Qwik! "Power comes in response to a need, not a desire." - Goku
+
+![genki-dama-spirit-bomb](https://user-images.githubusercontent.com/26133178/192087450-aef9929a-5e2f-4b4c-aae9-f1fc55f84c10.gif)
 
 - [Qwik Docs](https://qwik.builder.io/)
 - [Discord](https://qwik.builder.io/chat)
