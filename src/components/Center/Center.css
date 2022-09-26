@@ -1,0 +1,5 @@
+const CenterCSS = `
+.content {
+    display: flex;
+}
+`;

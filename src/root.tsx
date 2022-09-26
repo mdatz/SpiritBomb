@@ -1,16 +1,18 @@
-import { Counter } from './components/counter/counter';
-import { Logo } from './components/logo/logo';
+import { Button } from './components/Button/Button';
+import { Center } from './components/Center/Center';
 
 export default () => {
+
   return (
     <>
       <head>
         <meta charSet="utf-8" />
-        <title>Qwik Blank App</title>
+        <title>SpiritBomb Sandbox</title>
       </head>
       <body>
-        <Logo />
-        <Counter />
+        <Center>
+          <Button/>
+        </Center>
       </body>
     </>
   );
