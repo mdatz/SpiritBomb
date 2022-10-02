@@ -11,7 +11,7 @@ export default () => {
       </head>
       <body>
         <Center>
-          <Button/>
+          <Button color='red' size='medium' radius='huge'/>
         </Center>
       </body>
     </>

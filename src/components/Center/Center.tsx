@@ -1,21 +1,13 @@
-import { component$, useStyles$, Slot } from '@builder.io/qwik';
+import { component$, useStylesScoped$, Slot } from '@builder.io/qwik';
+import { CenterCSS } from './Center.style';
 
 export const Center = component$(() => {
 
-    useStyles$(CenterCSS);
+    useStylesScoped$(CenterCSS);
 
     return (
-        <div class="parent">
+        <div class="center">
             <Slot/>
         </div>
     );
 });
-
-export const CenterCSS = `
-.parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-`;

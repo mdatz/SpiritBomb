@@ -1,64 +1,39 @@
 import { component$, useStyles$ } from '@builder.io/qwik';
+import { ButtonCSS } from './Button.style';
+import { ButtonProps } from './types/ButtonProps';
+import Colors from '../../styles/Colors.style';
 
-export const Button = component$(() => {
+export const Button = component$((props: ButtonProps) => {
 
-    useStyles$(ButtonCSS);
+    ButtonCSS && useStyles$(ButtonCSS());
+
+    let _style = '';
+    let _class = 'button';
+
+    if(props.color) {
+        if(props.color in Colors) {
+            _style = `background-color: ${Colors[props.color][0]};`;
+        } else {
+            _style = `background-color: ${props.color};`;
+        }
+    }
+
+    if(props.disabled) {
+        _class = 'button';
+        _style = '';
+    }
+
+    if(props.size) {
+        _class += ` ${props.size}`;
+    }
+
+    if(props.radius) {
+        _class += ` radius-${props.radius}`;
+    }
 
     return (
         <div class="button-container">
-            <button class="button" onClick$={() => {}}>Sample Text</button>
+            <button class={_class} style={_style} disabled={props?.disabled} onClick$={() => {}}>Sample Text</button>
         </div>
     );
 });
-
-export const ButtonCSS = `
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.button:hover {
-    background-color: #3e8e41;
-}
-
-.button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 1.5px 4px #ccc;
-    transform: translateY(1px);
-}
-
-.button:focus {
-    outline: none;
-}
-
-.button:disabled {
-    background-color: #ccc;
-    color: #666;
-    cursor: not-allowed;
-}
-
-.button:disabled:hover {
-    background-color: #ccc;
-}
-
-.button:disabled:active {
-    background-color: #ccc;
-    box-shadow: none;
-    transform: none;
-}
-
-.button:disabled:focus {
-    outline: none;
-}
-
-.button-container {}
-`;
