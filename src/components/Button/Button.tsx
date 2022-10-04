@@ -1,21 +1,20 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
-import { ButtonCSS } from './Button.style';
+import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import { ButtonProps } from './types/ButtonProps';
-import Colors from '../../styles/Colors.style';
+import ButtonCSS from './styles/Button.css';
 
 export const Button = component$((props: ButtonProps) => {
 
-    ButtonCSS && useStyles$(ButtonCSS());
+    ButtonCSS && useStylesScoped$(ButtonCSS);
 
     let _style = '';
     let _class = 'button';
 
     if(props.color) {
-        if(props.color in Colors) {
-            _style = `background-color: ${Colors[props.color][0]};`;
-        } else {
-            _style = `background-color: ${props.color};`;
-        }
+        // if(props.color in Colors) {
+        //     _style = `background-color: ${Colors[props.color][0]};`;
+        // } else {
+        //     _style = `background-color: ${props.color};`;
+        // }
     }
 
     if(props.disabled) {
