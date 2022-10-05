@@ -1,7 +1,5 @@
-@import "../../../styles/open-color.css";
-
 .button {
-    background-color: #888888;
+    background-color: #26d80e;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -46,6 +44,110 @@
 
 .button:disabled:focus {
     outline: none;
+}
+
+.button-gray {
+    background-color: var(--oc-gray-6);
+}
+
+.button-gray:hover {
+    background-color: var(--oc-gray-7);
+}
+
+.button-red {
+    background-color: var(--oc-red-6);
+}
+
+.button-red:hover {
+    background-color: var(--oc-red-7);
+}
+
+.button-pink {
+    background-color: var(--oc-pink-6);
+}
+
+.button-pink:hover {
+    background-color: var(--oc-pink-7);
+}
+
+.button-grape {
+    background-color: var(--oc-grape-6);
+}
+
+.button-grape:hover {
+    background-color: var(--oc-grape-7);
+}
+
+.button-violet {
+    background-color: var(--oc-violet-6);
+}
+
+.button-violet:hover {
+    background-color: var(--oc-violet-7);
+}
+
+.button-indigo {
+    background-color: var(--oc-indigo-6);
+}
+
+.button-indigo:hover {
+    background-color: var(--oc-indigo-7);
+}
+
+.button-blue {
+    background-color: var(--oc-blue-6);
+}
+
+.button-blue:hover {
+    background-color: var(--oc-blue-7);
+}
+
+.button-cyan {
+    background-color: var(--oc-cyan-6);
+}
+
+.button-cyan:hover {
+    background-color: var(--oc-cyan-7);
+}
+
+.button-teal {
+    background-color: var(--oc-teal-6);
+}
+
+.button-teal:hover {
+    background-color: var(--oc-teal-7);
+}
+
+.button-green {
+    background-color: var(--oc-green-6);
+}
+
+.button-green:hover {
+    background-color: var(--oc-green-7);
+}
+
+.button-lime {
+    background-color: var(--oc-lime-6);
+}
+
+.button-lime:hover {
+    background-color: var(--oc-lime-7);
+}
+
+.button-yellow {
+    background-color: var(--oc-yellow-6);
+}
+
+.button-yellow:hover {
+    background-color: var(--oc-yellow-7);
+}
+
+.button-orange {
+    background-color: var(--oc-orange-6);
+}
+
+.button-orange:hover {
+    background-color: var(--oc-orange-7);
 }
 
 .tiny {

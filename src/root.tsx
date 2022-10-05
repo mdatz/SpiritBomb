@@ -1,3 +1,4 @@
+import { SpiritBombStyleProvider } from './components/SpiritBombStyleProvider/SpiritBombStyleProvider';
 import { Button } from './components/Button/Button';
 import { Center } from './components/Center/Center';
 
@@ -10,9 +11,11 @@ export default () => {
         <title>SpiritBomb Sandbox</title>
       </head>
       <body>
-        <Center>
-          <Button color='red' size='medium' radius='huge'/>
-        </Center>
+        <SpiritBombStyleProvider>
+          <Center>
+            <Button color='orange' size='medium' radius='huge'/>
+          </Center>
+        </SpiritBombStyleProvider>
       </body>
     </>
   );

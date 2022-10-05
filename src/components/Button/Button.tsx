@@ -10,11 +10,7 @@ export const Button = component$((props: ButtonProps) => {
     let _class = 'button';
 
     if(props.color) {
-        // if(props.color in Colors) {
-        //     _style = `background-color: ${Colors[props.color][0]};`;
-        // } else {
-        //     _style = `background-color: ${props.color};`;
-        // }
+        _class += ` button-${props.color}`;
     }
 
     if(props.disabled) {
